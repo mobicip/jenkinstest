@@ -17,7 +17,7 @@ pipeline {
     }
     stage('End') {
       steps {
-        echo 'I am ${NAME}'
+        echo 'I am ${env.NAME}'
       }
     }
   }
