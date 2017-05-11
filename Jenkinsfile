@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    NAME = 'SABARISH'
+  }
   stages {
     stage('Start') {
       steps {
@@ -22,11 +25,8 @@ pipeline {
     }
     stage('Fini') {
       steps {
-        echo 'Bye!'
+        echo 'Bye! ${NAME}'
       }
     }
-  }
-  environment {
-    NAME = 'SABARISH'
   }
 }
