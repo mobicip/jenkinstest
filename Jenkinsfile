@@ -25,7 +25,7 @@ pipeline {
     }
     stage('Fini') {
       steps {
-        echo 'Bye! ${env.NAME}'
+        echo "Bye! ${env.NAME}"
       }
     }
   }
