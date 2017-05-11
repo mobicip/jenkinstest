@@ -3,21 +3,26 @@ pipeline {
   stages {
     stage('Start') {
       steps {
+        echo 'Start'
+      }
+    }
+    stage('Par1') {
+      steps {
         parallel(
-          "para1": {
+          "Par1": {
             echo 'Hello'
             
           },
-          "para2": {
+          "Par2": {
             echo 'World'
             
           }
         )
       }
     }
-    stage('End') {
+    stage('Fini') {
       steps {
-        echo 'I am ${env.NAME}'
+        echo 'Bye!'
       }
     }
   }
